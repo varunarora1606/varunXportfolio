@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>Varun Arora</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=IBM+Plex+Mono:wght@400&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem("theme");
+          if (t) document.documentElement.setAttribute("data-theme", t);
+        } catch (e) {}
+      })();
+    </script>
+    <link rel="stylesheet" href="/core/site.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Varun Arora</h1>
+      </header>
+
+      <section>
+        <h2>About</h2>
+        <ul class="plain">
+          <li>Grew up in Delhi, India</li>
+          <li>
+            Started building software because I was curious about how things
+            worked
+          </li>
+          <li>
+            Work primarily on
+            <a
+              href="https://en.wikipedia.org/wiki/Software-defined_infrastructure"
+              class="inline-link"
+              >backend and infrastructure</a
+            >
+          </li>
+          <li>
+            Currently building distributed systems and backend infrastructure
+          </li>
+          <li>Working remotely with startups</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Writing</h2>
+        <div class="writing" id="writing">
+          <div class="posts project">
+            <!-- <a href="404.html" data-tags="ml">
+              <span>Reinforce From First Principles</span>
+              <span class="mono meta"
+                >Article · 2026 ( Currently working )</span
+              >
+            </a> -->
+            <a
+              href="https://varunarora.hashnode.dev/crash-recovery-from-first-principles"
+              data-tags="technical personal"
+              class=""
+            >
+              <span>Crash Recovery From First Principles</span>
+              <p>
+                Why high-throughput backends replaces direct database writes
+                with append-only write-ahead logs (WAL) and in-memory state
+              </p>
+              <span class="mono meta">Article · 2026</span>
+            </a>
+            <!-- <a href="/articles/serverless.html" data-tags="technical">
+              <span>Serverless from beginners POV</span>
+              <span class="mono meta">Article · 2026</span>
+            </a>
+            <a
+              href="https://x.com/Hi_Mrinal/status/2110251049919586483"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-tags="personal"
+            >
+              <span>Knowing when to scale horizontally and vertically</span>
+              <span class="mono meta">Post on X ↗ · 2026</span>
+            </a>
+            <a
+              href="https://x.com/Hi_Mrinal/status/2109474133994353028"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-tags="technical"
+            >
+              <span>Something on Polymorphism in C++</span>
+              <span class="mono meta">Post on X ↗ · 2026</span>
+            </a> -->
+          </div>
+
+          <div class="tags" role="group" aria-label="Filter writing by tag">
+            <button
+              class="tag"
+              type="button"
+              data-tag="technical"
+              aria-pressed="false"
+            >
+              technical<span class="mono count"></span>
+            </button>
+            <button
+              class="tag"
+              type="button"
+              data-tag="ml"
+              aria-pressed="false"
+            >
+              machine learning<span class="mono count"></span>
+            </button>
+            <button
+              class="tag"
+              type="button"
+              data-tag="personal"
+              aria-pressed="false"
+            >
+              personal experience<span class="mono count"></span>
+            </button>
+            <button
+              class="tag"
+              type="button"
+              data-tag="reflection"
+              aria-pressed="false"
+            >
+              self reflection<span class="mono count"></span>
+            </button>
+          </div>
+
+          <svg class="wires" id="wires" aria-hidden="true"></svg>
+        </div>
+      </section>
+
+      <section>
+        <h2>Projects</h2>
+        <div class="projects">
+          <!--
+            Each project has two buttons. They currently point at your X and
+            GitHub profiles. Replace the two hrefs per project with the
+            specific tweet URL and the repository URL.
+            To make a project name clickable too, wrap it:
+            <h3><a href="https://github.com/mrinalxdev/REPO">StreamableMap</a></h3>
+          -->
+          <article class="project">
+            <h3>Codgent</h3>
+            <p>
+              A terminal-based AI coding agent built from scratch, featuring a
+              custom agent runtime with streaming LLM interactions, multi-step
+              tool execution, permission handling, persistent sessions, and
+              automatic context compaction.
+            </p>
+            <div class="project-foot">
+              <ul class="stack" aria-label="Built with">
+                <li class="lang">TypeScript</li>
+                <li>Streaming</li>
+                <li>Context Management</li>
+                <li>Sessions</li>
+                <li>Tool Calling</li>
+              </ul>
+              <div class="project-links">
+                <!-- <a
+                  class="btn"
+                  href="https://x.com/Hi_Mrinal"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Demo <span class="glyph" aria-hidden="true">↗</span></a
+                > -->
+                <a
+                  class="btn"
+                  href="https://github.com/varunarora1606/Codgent"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Drop a star :p"
+                  aria-label="GitHub repository (drop a star)"
+                  >GitHub repository
+                  <span class="glyph" aria-hidden="true">★</span></a
+                >
+              </div>
+            </div>
+          </article>
+          <article class="project">
+            <h3>Betwise</h3>
+            <p>
+              A CEX-style prediction market engine built, featuring an in-memory
+              order book and a custom matching engine. Supports limit & market
+              orders, partial fills and balance locking. Uses Redis for event
+              streaming, with asynchronous PostgreSQL persistence and
+              WebSocket-based real-time updates.
+            </p>
+            <div class="project-foot">
+              <ul class="stack" aria-label="Built with">
+                <li class="lang">Go</li>
+                <li>Concurrency</li>
+                <li>Redis</li>
+                <li>PostgreSQL</li>
+                <li>WebSockets</li>
+                <li>Docker</li>
+              </ul>
+              <div class="project-links">
+                <a
+                  class="btn"
+                  href="https://vimeo.com/1179316375?fl=pl&fe=sh"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Demo <span class="glyph" aria-hidden="true">↗</span></a
+                >
+                <a
+                  class="btn"
+                  href="https://github.com/varunarora1606/Betwise-Prediction-Market"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Drop a star :p"
+                  aria-label="GitHub repository (drop a star)"
+                  >GitHub repository
+                  <span class="glyph" aria-hidden="true">★</span></a
+                >
+              </div>
+            </div>
+          </article>
+
+          <article class="project">
+            <h3>Keyra</h3>
+            <p>
+              A Redis-inspired in-memory datastore built in Go, featuring custom
+              TCP/RESP communication, RDB snapshot persistence, TTL-based key
+              expiration, and master-replica replication.
+            </p>
+            <div class="project-foot">
+              <ul class="stack" aria-label="Built with">
+                <li class="lang">Go</li>
+                <li>TCP & RESP Protocol</li>
+                <li>Replication</li>
+                <li>Concurrency</li>
+              </ul>
+              <div class="project-links">
+                <a
+                  class="btn"
+                  href="https://vimeo.com/1182220804"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Demo <span class="glyph" aria-hidden="true">↗</span></a
+                >
+                <a
+                  class="btn"
+                  href="https://github.com/varunarora1606/Redix"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Drop a star :p"
+                  aria-label="GitHub repository (drop a star)"
+                  >GitHub repository
+                  <span class="glyph" aria-hidden="true">★</span></a
+                >
+              </div>
+            </div>
+          </article>
+
+          <article class="project">
+            <h3>Reclaim</h3>
+            <p>
+              A non-custodial inheritance protocol built on Solana, featuring
+              PDA-based SOL custody, liquid SOL-backed tokens, and automated
+              inheritance execution through on-chain inactivity logic.
+            </p>
+            <div class="project-foot">
+              <ul class="stack" aria-label="Built with">
+                <li class="lang">Rust</li>
+                <li>Solana</li>
+                <li>Smart Contracts</li>
+                <li>SPL Tokens</li>
+              </ul>
+              <div class="project-links">
+                <!-- <a
+                  class="btn"
+                  href="https://x.com/Hi_Mrinal"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Demo
+                  <span class="glyph" aria-hidden="true">↗</span></a
+                > -->
+                <a
+                  class="btn"
+                  href="https://github.com/varunarora1606/Reclaim"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Drop a star :p"
+                  aria-label="GitHub repository (drop a star)"
+                  >GitHub repository
+                  <span class="glyph" aria-hidden="true">★</span></a
+                >
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <footer>
+        <a href="https://github.com/varunarora1606">GitHub</a>
+        <a href="https://x.com/VarunArora80243">X</a>
+        <a href="https://www.linkedin.com/in/varun-arora-128392326/"
+          >LinkedIn</a
+        >
+        <button
+          id="theme-toggle"
+          class="theme-toggle"
+          type="button"
+          aria-label="Switch theme"
+        >
+          Dark
+        </button>
+      </footer>
+    </main>
+
+    <script>
+      (function () {
+        var root = document.documentElement;
+        var btn = document.getElementById("theme-toggle");
+        var media = window.matchMedia("(prefers-color-scheme: dark)");
+        function current() {
+          return (
+            root.getAttribute("data-theme") ||
+            (media.matches ? "dark" : "light")
+          );
+        }
+        function sync() {
+          var isDark = current() === "dark";
+          btn.textContent = isDark ? "Light" : "Dark";
+          btn.setAttribute(
+            "aria-label",
+            isDark ? "Switch to light theme" : "Switch to dark theme",
+          );
+        }
+        btn.addEventListener("click", function () {
+          var next = current() === "dark" ? "light" : "dark";
+          root.setAttribute("data-theme", next);
+          try {
+            localStorage.setItem("theme", next);
+          } catch (e) {}
+          sync();
+        });
+        media.addEventListener("change", function () {
+          var saved = null;
+          try {
+            saved = localStorage.getItem("theme");
+          } catch (e) {}
+          if (!saved) sync();
+        });
+        sync();
+      })();
+
+      /* ---------- Tag filter: fill + wires ---------- */
+      (function () {
+        var wrap = document.getElementById("writing");
+        var svg = document.getElementById("wires");
+        var posts = Array.prototype.slice.call(
+          wrap.querySelectorAll(".posts a"),
+        );
+        var tags = Array.prototype.slice.call(wrap.querySelectorAll(".tag"));
+        var NS = "http://www.w3.org/2000/svg";
+        var active = null;
+
+        function hasTag(post, tag) {
+          return (
+            (post.getAttribute("data-tags") || "").split(/\s+/).indexOf(tag) !==
+            -1
+          );
+        }
+
+        // post counts next to each tag
+        tags.forEach(function (t) {
+          var n = posts.filter(function (p) {
+            return hasTag(p, t.dataset.tag);
+          }).length;
+          t.querySelector(".count").textContent = n;
+        });
+
+        function drawWires(animate) {
+          svg.innerHTML = "";
+          if (!active || getComputedStyle(svg).display === "none") return;
+
+          var box = wrap.getBoundingClientRect();
+          var tagEl = wrap.querySelector('.tag[data-tag="' + active + '"]');
+          var tb = tagEl.getBoundingClientRect();
+          var x1 = tb.left - box.left + 3.5;
+          var y1 = tb.top - box.top + tb.height / 2;
+
+          var i = 0;
+          posts.forEach(function (p) {
+            if (!hasTag(p, active)) return;
+            var pb = p.getBoundingClientRect();
+            var x2 = pb.right - box.left + 14; // just past the fill's right edge
+            var y2 = pb.top - box.top + pb.height / 2;
+            var mid = (x1 + x2) / 2;
+            var delay = animate ? i * 90 : 0;
+
+            var path = document.createElementNS(NS, "path");
+            path.setAttribute(
+              "d",
+              "M" +
+                x1 +
+                " " +
+                y1 +
+                " C" +
+                mid +
+                " " +
+                y1 +
+                " " +
+                mid +
+                " " +
+                y2 +
+                " " +
+                x2 +
+                " " +
+                y2,
+            );
+            path.setAttribute("pathLength", "1");
+            path.setAttribute("class", "wire");
+            path.style.setProperty("--wire-delay", delay + "ms");
+            if (!animate) {
+              path.style.animation = "none";
+              path.style.strokeDashoffset = "0";
+            }
+            svg.appendChild(path);
+
+            var dot = document.createElementNS(NS, "circle");
+            dot.setAttribute("cx", x2);
+            dot.setAttribute("cy", y2);
+            dot.setAttribute("r", "2.5");
+            dot.setAttribute("class", "wire-end");
+            dot.style.setProperty("--wire-delay", delay + "ms");
+            if (!animate) {
+              dot.style.animation = "none";
+              dot.style.opacity = "0.85";
+            }
+            svg.appendChild(dot);
+            i++;
+          });
+        }
+
+        function select(tag) {
+          active = active === tag ? null : tag; // click again to clear
+          tags.forEach(function (t) {
+            t.setAttribute("aria-pressed", String(t.dataset.tag === active));
+          });
+          var i = 0;
+          posts.forEach(function (p) {
+            var on = !!active && hasTag(p, active);
+            p.style.setProperty("--fill-delay", on ? i * 90 + "ms" : "0ms");
+            p.classList.toggle("lit", on);
+            if (on) i++;
+          });
+          drawWires(true);
+        }
+
+        tags.forEach(function (t) {
+          t.addEventListener("click", function () {
+            select(t.dataset.tag);
+          });
+        });
+
+        var raf;
+        window.addEventListener("resize", function () {
+          cancelAnimationFrame(raf);
+          raf = requestAnimationFrame(function () {
+            drawWires(false);
+          });
+        });
+        if (document.fonts && document.fonts.ready) {
+          document.fonts.ready.then(function () {
+            drawWires(false);
+          });
+        }
+      })();
+    </script>
+  </body>
+</html>
