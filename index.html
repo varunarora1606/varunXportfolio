@@ -34,119 +34,14 @@
         <ul class="plain">
           <li>Grew up in Delhi, India</li>
           <li>
-            Started building software because I was curious about how things
-            worked
+            Started coding out of curiosity for how systems work under the hood
           </li>
+          <li>Currently building AI agents and distributed systems</li>
+          <li>Enjoy digging into storage engines and low-level internals</li>
           <li>
-            Work primarily on
-            <a
-              href="https://en.wikipedia.org/wiki/Software-defined_infrastructure"
-              class="inline-link"
-              >backend and infrastructure</a
-            >
+            Writing technical breakdowns on system internals and AI agents
           </li>
-          <li>
-            Currently building distributed systems and backend infrastructure
-          </li>
-          <li>Working remotely with startups</li>
         </ul>
-      </section>
-
-      <section>
-        <h2>Writing</h2>
-        <div class="writing" id="writing">
-          <div class="posts project">
-            <!-- <a href="404.html" data-tags="ml">
-              <span>Reinforce From First Principles</span>
-              <span class="mono meta"
-                >Article · 2026 ( Currently working )</span
-              >
-            </a> -->
-            <a
-              href="https://varunarora.hashnode.dev/context-compaction-working-memory-for-ai-agents"
-              data-tags="ml personal"
-              class=""
-            >
-              <span>Context Compaction: Working Memory for AI Agents</span>
-              <p>
-                Why append-only agent loops degrade over long tasks—and how to
-                manage context windows without breaking prefix KV caching
-              </p>
-              <span class="mono meta">Article · 2026</span>
-            </a>
-            <a
-              href="https://varunarora.hashnode.dev/designing-crash-safe-in-memory-systems-with-a-wal"
-              data-tags="technical personal"
-              class=""
-            >
-              <span>Designing Crash-Safe In-Memory Systems with a WAL</span>
-              <p>
-                Why high-throughput backends replaces direct database writes
-                with append-only write-ahead logs (WAL) and in-memory state
-              </p>
-              <span class="mono meta">Article · 2026</span>
-            </a>
-            <!-- <a href="/articles/serverless.html" data-tags="technical">
-              <span>Serverless from beginners POV</span>
-              <span class="mono meta">Article · 2026</span>
-            </a>
-            <a
-              href="https://x.com/Hi_Mrinal/status/2110251049919586483"
-              target="_blank"
-              rel="noopener noreferrer"
-              data-tags="personal"
-            >
-              <span>Knowing when to scale horizontally and vertically</span>
-              <span class="mono meta">Post on X ↗ · 2026</span>
-            </a>
-            <a
-              href="https://x.com/Hi_Mrinal/status/2109474133994353028"
-              target="_blank"
-              rel="noopener noreferrer"
-              data-tags="technical"
-            >
-              <span>Something on Polymorphism in C++</span>
-              <span class="mono meta">Post on X ↗ · 2026</span>
-            </a> -->
-          </div>
-
-          <div class="tags" role="group" aria-label="Filter writing by tag">
-            <button
-              class="tag"
-              type="button"
-              data-tag="technical"
-              aria-pressed="false"
-            >
-              technical<span class="mono count"></span>
-            </button>
-            <button
-              class="tag"
-              type="button"
-              data-tag="ml"
-              aria-pressed="false"
-            >
-              machine learning<span class="mono count"></span>
-            </button>
-            <button
-              class="tag"
-              type="button"
-              data-tag="personal"
-              aria-pressed="false"
-            >
-              personal experience<span class="mono count"></span>
-            </button>
-            <button
-              class="tag"
-              type="button"
-              data-tag="reflection"
-              aria-pressed="false"
-            >
-              self reflection<span class="mono count"></span>
-            </button>
-          </div>
-
-          <svg class="wires" id="wires" aria-hidden="true"></svg>
-        </div>
       </section>
 
       <section>
@@ -162,10 +57,9 @@
           <article class="project">
             <h3>Codgent</h3>
             <p>
-              A terminal-based AI coding agent built from scratch, featuring a
-              custom agent runtime with streaming LLM interactions, multi-step
-              tool execution, permission handling, persistent sessions, and
-              automatic context compaction.
+              Terminal-based AI coding agent built from scratch with a custom
+              runtime, streaming responses, tool guardrails, sessions, and
+              context compaction.
             </p>
             <div class="project-foot">
               <ul class="stack" aria-label="Built with">
@@ -199,11 +93,9 @@
           <article class="project">
             <h3>Betwise</h3>
             <p>
-              A CEX-style prediction market engine built, featuring an in-memory
-              order book and a custom matching engine. Supports limit & market
-              orders, partial fills and balance locking. Uses Redis for event
-              streaming, with asynchronous PostgreSQL persistence and
-              WebSocket-based real-time updates.
+              CEX-style prediction market engine featuring a price-time order
+              book, balance locking, WAL crash recovery, Redis streams, and
+              async persistence.
             </p>
             <div class="project-foot">
               <ul class="stack" aria-label="Built with">
@@ -239,9 +131,9 @@
           <article class="project">
             <h3>Keyra</h3>
             <p>
-              A Redis-inspired in-memory datastore built in Go, featuring custom
-              TCP/RESP communication, RDB snapshot persistence, TTL-based key
-              expiration, and master-replica replication.
+              Redis-inspired in-memory datastore featuring custom TCP/RESP
+              parsing, RDB snapshot persistence, TTL key expiration, and
+              master-slave replication.
             </p>
             <div class="project-foot">
               <ul class="stack" aria-label="Built with">
@@ -275,9 +167,9 @@
           <article class="project">
             <h3>Reclaim</h3>
             <p>
-              A non-custodial inheritance protocol built on Solana, featuring
-              PDA-based SOL custody, liquid SOL-backed tokens, and automated
-              inheritance execution through on-chain inactivity logic.
+              Non-custodial inheritance protocol featuring PDA-based SOL
+              custody, liquid SOL-backed tokens, and automated on-chain
+              inheritance execution.
             </p>
             <div class="project-foot">
               <ul class="stack" aria-label="Built with">
@@ -311,12 +203,102 @@
         </div>
       </section>
 
+      <section>
+        <h2>Writing</h2>
+        <div class="writing" id="writing">
+          <div class="posts project">
+            <!-- <a href="404.html" data-tags="ml">
+              <span>Reinforce From First Principles</span>
+              <span class="mono meta"
+                >Article · 2026 ( Currently working )</span
+              >
+            </a> -->
+            <a
+              href="https://varunarora.hashnode.dev/context-compaction-working-memory-for-ai-agents"
+              data-tags="ai personal"
+              class=""
+            >
+              <span>Context Compaction: Working Memory for AI Agents</span>
+              <p>
+                Why append-only agent loops degrade over long tasks and how to
+                manage context windows.
+              </p>
+              <span class="mono meta">Article · 2026</span>
+            </a>
+            <a
+              href="https://varunarora.hashnode.dev/designing-crash-safe-in-memory-systems-with-a-wal"
+              data-tags="ds personal"
+              class=""
+            >
+              <span>Designing Crash-Safe In-Memory Systems with a WAL</span>
+              <p>
+                How high-throughput backends achieve disk durability at
+                in-memory speeds.
+              </p>
+              <span class="mono meta">Article · 2026</span>
+            </a>
+            <!-- <a href="/articles/serverless.html" data-tags="technical">
+              <span>Serverless from beginners POV</span>
+              <span class="mono meta">Article · 2026</span>
+            </a>
+            <a
+              href="https://x.com/Hi_Mrinal/status/2110251049919586483"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-tags="personal"
+            >
+              <span>Knowing when to scale horizontally and vertically</span>
+              <span class="mono meta">Post on X ↗ · 2026</span>
+            </a>
+            <a
+              href="https://x.com/Hi_Mrinal/status/2109474133994353028"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-tags="technical"
+            >
+              <span>Something on Polymorphism in C++</span>
+              <span class="mono meta">Post on X ↗ · 2026</span>
+            </a> -->
+          </div>
+
+          <div class="tags" role="group" aria-label="Filter writing by tag">
+            <button
+              class="tag"
+              type="button"
+              data-tag="ds"
+              aria-pressed="false"
+            >
+              distributed systems<span class="mono count"></span>
+            </button>
+            <button
+              class="tag"
+              type="button"
+              data-tag="ai"
+              aria-pressed="false"
+            >
+              ai agents<span class="mono count"></span>
+            </button>
+            <button
+              class="tag"
+              type="button"
+              data-tag="personal"
+              aria-pressed="false"
+            >
+              personal experience<span class="mono count"></span>
+            </button>
+          </div>
+
+          <svg class="wires" id="wires" aria-hidden="true"></svg>
+        </div>
+      </section>
+
       <footer>
         <a href="https://github.com/varunarora1606">GitHub</a>
         <a href="https://x.com/VarunArora80243">X</a>
         <a href="https://www.linkedin.com/in/varun-arora-128392326/"
           >LinkedIn</a
         >
+        <a href="mailto:aroravaruncode@gmail.com">Email</a>
         <button
           id="theme-toggle"
           class="theme-toggle"
